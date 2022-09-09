@@ -209,7 +209,7 @@ namespace dz1
 
 	void Dz1()
 	{
-		std::ifstream in("./data/phonebook.txt"s);
+		std::ifstream in("../data/phonebook.txt"s);
 		PhoneBook book(in);
 		std::cout << book << std::endl;
 		std::cout << "------SortByName-------" << std::endl;
