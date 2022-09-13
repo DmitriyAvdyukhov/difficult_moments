@@ -182,13 +182,13 @@ namespace dz2
 
 	void CountVowelsInWarAndPiace()
 	{
-		std::cout << "\nTest Count Vowels In War And Piace" << std::endl;
+		std::cout << "\nTest Count Vowels In War And Peace" << std::endl;
 		CountVowels(Pred, "Simple predicat");
 		CountVowels(PredFind, "Predicat count_if with find");
 		CountVowels(PredFor, "Predicat count_if with for");
 		CountVowelsByFor(ForAndFind, "For and Find");
 		CountVowelsByFor(ForAndFor, "For and For");
-		std::cout << "Test Count Vowels In War And Piace is Ok" << std::endl;
+		std::cout << "Test Count Vowels In War And Peace is Ok" << std::endl;
 	}
 
 	void Dz2()
