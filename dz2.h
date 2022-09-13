@@ -61,7 +61,7 @@ namespace dz2
 			});
 	}
 
-	static auto Pred = [](char ch)
+	auto Pred = [](char ch)
 	{
 		return ch == 'A' || ch == 'a' 
 			|| ch == 'E' || ch == 'e' 
