@@ -174,6 +174,7 @@ namespace dz2
 		std::cout << "\nTest sort vector" << std::endl;
 		std::vector<int*> vec;
 		RandomFillVector(vec, 1000);
+		assert(!CheckVector(vec));
 		SortPointers(vec);
 		assert(CheckVector(vec));
 		DestructVector(vec);
