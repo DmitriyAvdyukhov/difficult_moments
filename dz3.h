@@ -49,14 +49,15 @@ namespace dz3
 			{
 				if (is_first)
 				{
-					std::cout << "\nEnter next line of matrix" << std::endl;
+					std::cout << "Enter next line of matrix" << std::endl;
 				}
 				is_first = true;
 				for (auto& m : mat)
 				{
 					std::cout << "Enter your number: ";
 					std::cin >> m;					
-				}				
+				}	
+				std::cout << std::endl;
 			}
 		}
 
@@ -112,7 +113,7 @@ namespace dz3
 						}
 						++a;
 					}
-					result += pow(-1, static_cast<double>(i + 2)) * matrix[0][i] * Determinant(mat, n - 1);
+					result += pow(-1, static_cast<double>(i)) * matrix[0][i] * Determinant(mat, n - 1);
 				}
 				
 			}		
@@ -222,7 +223,7 @@ namespace dz3
 	void Dz3()
 	{
 		TestList();
-		//TestMatrix();
+		TestMatrix();
 		TestIterator();
 	}
 }
