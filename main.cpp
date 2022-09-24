@@ -11,7 +11,7 @@ int main()
 	//dz1::Dz1();
 	//dz2::Dz2();
 	//dz3::Dz3();
-	dz4_5::Dz4();
+	//dz4_5::Dz4();
 	dz4_5::Dz5();
 	return 0;
 }

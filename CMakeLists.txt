@@ -8,6 +8,6 @@ set(FILES_PROJECT main.cpp
                   dz1.h dz1.cpp 
 				  dz2.h
 				  dz3.h
-				  dz4_5.h)
+				  dz4_5.h dz4_5.cpp)
 				  
 add_executable(main ${FILES_PROJECT})

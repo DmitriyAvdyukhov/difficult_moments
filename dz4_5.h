@@ -7,9 +7,12 @@
 #include <random>
 #include <functional>
 #include <cmath>
+#include <set>
+#include <map>
 #include <numeric>
 #include <iostream>
 #include <cassert>
+#include <sstream>
 
 namespace dz4_5
 {
@@ -25,25 +28,7 @@ namespace dz4_5
 		std::swap(con, new_con);
 	}
 
-	void TestInsertSorted()
-	{
-		std::cout << "Test insert sorted" << std::endl;
-		std::vector<int>v{ 1,2,3,4,5,7,8,9 };
-		InsertSorted(v, 6);
-		std::vector<int>v1{ 1,2,3,4,5,6,7,8,9 };
-		assert(v1 == v);
-
-		std::deque<int> dec{ 1,2,3,5,6 };
-		InsertSorted(dec, 4);
-		std::deque<int> dec1{ 1,2,3,4,5,6 };
-		assert(dec == dec1);
-
-		std::list<double>lis{ 1.2, 2.5, 3.4, 6.8 };
-		InsertSorted(lis, 4.6);
-		std::list<double>lis1{ 1.2, 2.5, 3.4, 4.6, 6.8 };
-		assert(lis == lis1);
-		std::cout << "Test insert sorted is Ok" << std::endl;
-	}
+	void TestInsertSorted();
 
 	template<typename T>
 	void PrintVector(const std::vector<T>& v)
@@ -52,38 +37,32 @@ namespace dz4_5
 		std::cout << std::endl;
 	}
 
-	
+	void TestVectors();
 
-	void TestVectors()
+	void Dz4();
+
+	void PrintWords(const std::set<std::string>& words, std::ostream& out = std::cout);
+
+	template<typename Iterator>
+	void UniqueWords(Iterator begin, Iterator last, std::ostream& out = std::cout)
 	{
-		std::cout << "Test Inaccuracy" << std::endl;
-		std::random_device rd;
-		std::mt19937 mt(rd());
-		std::vector<double>v1(100);		
-		std::generate(v1.begin(), v1.end(), std::bind(std::uniform_real_distribution<>(0, 100), std::ref(mt)));
-		std::vector<int>v2{ v1.begin(), v1.end() };
-		PrintVector(v1);
-		PrintVector(v2);
-		double result = 0.;
-		auto Inaccuracy = [](double x, int y)
-		{
-			return pow((x - y), 2);
-		};
-		auto res = std::inner_product(v1.begin(), v1.end(), v2.begin(), 0., std::plus<double>(), Inaccuracy);
-		std::cout << "Inaccuracy = " << res << std::endl;
-
-		std::cout << "Test Inaccuracy is Ok" << std::endl;
+		std::set<std::string>words{ begin, last };
+		PrintWords(words, out);
 	}
 
-	void Dz4()
-	{
-		TestInsertSorted();
-		TestVectors();
-	}
+	void TestUniqueWords();
 
+	std::ostream& operator<<(std::ostream& out, const std::multimap<size_t, std::string>& sentences);
 
-	void Dz5()
-	{
+	size_t CountWordInSentence(const std::string& str);
 
-	}
+	std::multimap<size_t, std::string> ParseString(const std::string& s);
+
+	void TestCountWords();
+
+	void TestParserString();
+
+	void TestMapWords();
+
+	void Dz5();
 }
