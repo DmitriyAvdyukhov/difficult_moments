@@ -145,7 +145,7 @@ namespace dz6
 					if (it != owen.end())
 					{
 						std::cout << "Erase number: " << *it << std::endl;
-						owen.erase(std::remove(owen.begin(), owen.end(), *it), owen.end());
+						owen.erase(std::remove(owen.begin(), owen.end(), *it));
 					}
 										
 					
