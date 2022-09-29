@@ -2,6 +2,7 @@
 #include "dz2.h"
 #include "dz3.h"
 #include "dz4_5.h"
+#include "dz6.h"
 
 
 
@@ -12,6 +13,7 @@ int main()
 	//dz2::Dz2();
 	//dz3::Dz3();
 	//dz4_5::Dz4();
-	dz4_5::Dz5();
+	//dz4_5::Dz5();
+	dz6::Dz6();
 	return 0;
 }
