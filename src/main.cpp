@@ -16,6 +16,8 @@ int main()
 	//dz4_5::Dz4();
 	//dz4_5::Dz5();
 	//dz6::Dz6();
-	dz7::Dz7();
+	//dz7::Dz7();
+	testing::InitGoogleTest();
+	return RUN_ALL_TESTS();
 	return 0;
 }
