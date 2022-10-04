@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package students_group_proto;
+
+message FullName
+{
+	string  name_proto = 1;
+	string  surname_proto = 2;
+	optional string  patronymic_proto = 3;
+}
+
+message Student
+{
+	FullName name_proto = 1;
+	repeated uint32  evalutions_proto = 2;
+	double average_rating_proto = 3;
+}
+
+message	SyudentGroup
+{
+	repeated Student students_proto = 1;
+}
