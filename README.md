@@ -13,5 +13,5 @@ cmake --build .
 # Запуск
 В папке `build` выполнить команду
 ```sh
-./main 
+./bin/main 
 ```
